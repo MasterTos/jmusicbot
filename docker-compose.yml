@@ -1,0 +1,11 @@
+version: "3"
+services:
+  jmusicbot:
+    container_name: jmusicbot
+    environment:
+      - APP_ENV=docker
+    build: .
+    restart: always
+    volumes:
+      - ./config:/usr/src/musicbot/config
+      - ./config/serversettings.json:/usr/src/musicbot/serversettings.json
