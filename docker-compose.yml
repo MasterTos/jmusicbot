@@ -1,10 +1,10 @@
 version: "3"
 services:
   jmusicbot:
+    image: mastertos:jmusicbot/latest
     container_name: jmusicbot
     environment:
       - APP_ENV=docker
-    build: .
     restart: always
     volumes:
       - ./config:/usr/src/musicbot/config
